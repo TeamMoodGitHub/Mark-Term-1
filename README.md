@@ -9,5 +9,5 @@ a certain threshold of users online with a certain age (pending based on API acc
 someone who doesn't want to be constantly flamed to get onto LoL
 
 ## Technologies
-Client - React.js
-Server - Node.js
+Client - React.js<br>
+Server - Node.js<br>
