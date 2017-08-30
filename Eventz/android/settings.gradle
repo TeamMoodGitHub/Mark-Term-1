@@ -1,0 +1,3 @@
+rootProject.name = 'Eventz'
+
+include ':app'
