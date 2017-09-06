@@ -13,6 +13,7 @@ import {
   Dimensions
 } from 'react-native';
 import MapView from 'react-native-maps';
+import Login from './android/app/src/components/Login/Login'
 
 const {width, height} = Dimensions.get('window')
 const SCREEN_HEIGHT = height;
