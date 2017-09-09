@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "430731464621",
+    "firebase_url": "https://eventz-f90a7.firebaseio.com",
+    "project_id": "eventz-f90a7",
+    "storage_bucket": "eventz-f90a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:430731464621:android:fa3177c7fd7bdf06",
+        "android_client_info": {
+          "package_name": "com.eventz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "430731464621-t2jotf4ukrjm7bk902aebjqabmgjdkdg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjOn1yjTv0wjpfRfkjtS_6xIOmvQoelts"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
