@@ -22,7 +22,7 @@ const LATITUDE_DELTA = .0922
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO
 
 
-export default class Eventz extends Component {
+export default class Maps extends Component {
   constructor(props){
     super(props);
     this.state = {
