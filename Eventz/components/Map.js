@@ -75,7 +75,6 @@ export default class Maps extends Component {
     })
   }
 
-
   componentWillUnmount(){
     navigator.geolocation.clearWatch(this.watchID)
   }
@@ -96,7 +95,7 @@ export default class Maps extends Component {
           </MapView.Marker>
         </MapView>
     </View>
-    );
+    );  
   }
 }
 

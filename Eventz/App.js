@@ -12,40 +12,22 @@ import{
     StackNavigator
 } from 'react-navigation';
 
-class HomeScreen extends Component{
-    static navigationOptions = {
-        title: 'Welcome',
-    };
-    render() {
-        const {navigate} = this.props.navigation;
-        return (
-            <View>
-                <Text>Hello, Navigation!</Text>
-                <Button
-                    onPress={() => navigate('Second')}
-                    title="Second Screen"
-                />
-            </View>
-        );
-    }
-}
+import Maps from './components/Map';
+import Login from './components/Login';
 
-class SecondScreen extends Component{
-    static navigationOptions = {
-        title: 'Second Screen'
-    };
-    render(){
-        return(
-            <View>
-                <Text>Second Screen Lit AF</Text>
-            </View>
+class App extends Component{
+    render() {
+        return (
+            <Login />
         );
     }
 }
 
 const Eventz = StackNavigator({
-    Home: {screen: HomeScreen},
-    Second: {screen: SecondScreen},
+    Login: {screen: Login},
+    Maps: {screen: Maps},
 });
+
+export default Eventz;
 
 AppRegistry.registerComponent('Eventz', () => Eventz);

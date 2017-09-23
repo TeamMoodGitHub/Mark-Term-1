@@ -3,9 +3,17 @@ import {
     StyleSheet, 
     View,
     TextInput,
-    TouchableOpacity,
+    Button,
+    Text,
     KeyboardAvoidingView
 } from 'react-native';
+
+import{
+    StackNavigator,
+} from 'react-navigation';
+
+import Maps from './Map';
+import Eventz from '.././App'
 
 export default class LoginForm extends Component {
     render(){
@@ -30,9 +38,11 @@ export default class LoginForm extends Component {
                     style={styles.input}
                     ref={(input) => this.passwordInput = input}
                 />
-                <TouchableOpacity style={styles.buttonContainer} onPress={() => navgate('Maps')}>
-                    <Text style={styles.buttonText}>Login</Text>
-                </TouchableOpacity>
+                <Button onPress={() => navigate('Maps')} 
+                        style={styles.buttonContainer}
+                        title="Login"
+                >
+                </Button>
             </KeyboardAvoidingView>
         );
     }

@@ -11,10 +11,11 @@ export default class Login extends Component {
     };
 
     render(){
+        const {navigate} =this.props.navigation;      
         return(
             <View style={styles.container}>
-                <View style={syles.formcontainer}>
-                    <LoginForm />
+                <View style={styles.formcontainer}>
+                    <LoginForm navigation={this.props.navigation}/>
                 </View>
             </View>
         );
