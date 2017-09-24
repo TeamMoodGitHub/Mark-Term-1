@@ -31,10 +31,6 @@ export default class Maps extends Component {
         longitude: 0,
         latitudeDelta: 0,
         longitudeDelta: 0
-      },
-      markerPosition: {
-        latitude: 0,
-        longitude: 0
       }
     }
   }
@@ -54,7 +50,6 @@ export default class Maps extends Component {
       }
 
       this.setState({initialPos: initialRegion})
-      this.setState({markerPosition: initialRegion})
     },
     (error) => alert(JSON.stringify(error)),
     {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000})
@@ -71,28 +66,20 @@ export default class Maps extends Component {
       }
 
       this.setState({initialPos: lastRegion})
-      this.setState({markerPosition: lastRegion})
     })
   }
 
   componentWillUnmount(){
     navigator.geolocation.clearWatch(this.watchID)
   }
-
+  
   render() {
     return (
       <View style={styles.container}>
         <MapView
           style={styles.map}
-          region={this.state.initialPos}>
-
-          <MapView.Marker
-            coordinate={this.state.markerPosition}>
-            <View style={styles.radius}>
-              <View style={styles.marker}>
-              </View>
-            </View>
-          </MapView.Marker>
+          region={this.state.initialPos}
+          showsUserLocation={true}>
         </MapView>
     </View>
     );  
@@ -108,26 +95,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
-  },
-  radius:{
-    height: 50,
-    width: 50,
-    borderRadius: 50/2,
-    overflow: 'hidden',
-    backgroundColor: 'rgba(0, 122, 255, 0.1)',
-    borderWidth: 1,
-    borderColor: 'rgba(0, 112, 255, 0.3)',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  marker: {
-    height: 20,
-    width: 20,
-    borderWidth: 3,
-    borderColor: 'white',
-    borderRadius: 20 / 2,
-    overflow: 'hidden',
-    backgroundColor: '#007AFF'
   },
   map: {
     left:0,
