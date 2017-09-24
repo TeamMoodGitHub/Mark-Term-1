@@ -33,9 +33,14 @@ export default class Maps extends Component {
         longitudeDelta: 0
       }
     }
+    this.mapPressed = this.mapPressed.bind(this);
   }
 
   watchID: ?number = null
+
+  mapPressed(){
+    
+  }
 
   componentDidMount(){
     navigator.geolocation.getCurrentPosition((position) => {
@@ -79,7 +84,9 @@ export default class Maps extends Component {
         <MapView
           style={styles.map}
           region={this.state.initialPos}
-          showsUserLocation={true}>
+          showsUserLocation={true}
+          followUserLocation={true}
+          onPress={this.mapPressed}>
         </MapView>
     </View>
     );  
